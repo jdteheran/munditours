@@ -1,0 +1,87 @@
+.formulario {
+    margin: 15px 100px 15px 100px !important;
+}
+
+.boton {
+    margin: 0px 20px 0px 20px !important;
+}
+
+.restar, .sumar {
+    width: 40px;
+    margin-top: -7px;
+}
+
+.hotel {
+    border: solid 1px #4e4e50;
+    padding: 30px 0px 30px 0px;
+    margin: 10px 200px 10px 200px;
+    border-radius: 12px 12px 12px 0px;
+    -webkit-box-shadow: -4px 4px 2px 0px rgba(74,62,74,0.4);
+    -moz-box-shadow: -4px 4px 2px 0px rgba(74,62,74,0.4);
+    box-shadow: -4px 4px 2px 0px rgba(74,62,74,0.4);
+}
+
+.imagen {
+    text-align: center;
+}
+
+.imagenHotel {
+    height: 230px;
+    width: 230px;
+    border-radius: 12px;
+}
+
+.ubicacion p, .ubicacion div {
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.ubicacion div {
+    padding-bottom: 20px;
+}
+
+.descripcion p, .detalles p {
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+
+.especificaciones {
+    font-size: 15px;
+}
+
+.detalles p {
+    padding-bottom: 20px;
+}
+
+.clasificacion {
+    margin-top: 5px;
+    padding-bottom: 45px;
+}
+
+.califiacion p {
+    background: #007bff;
+    padding: 5px 38px 5px 5px;
+    border-radius: 7px;
+    color: white;
+    font-weight: bold;
+}
+
+.duracion p {
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+.precio, .duracion {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.precio .valor {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.detalle p {
+    font-size: 12px;
+}

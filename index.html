@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <iframe src="" frameborder="0"></iframe>
+    <form action="" method="get" autocomplete="off">
+        <div class="form-row text-center formulario">
+            <div class="col-md-2">
+                <input class="form-control" type="text" name="destino" id="destino" placeholder="¿A donde vas?">
+            </div>
+            <div class="col-md-3">
+                <input class="form-control" type="datetime" name="fechas" id="fechas" placeholder="Check in - Check out" value="">
+            </div>
+            <div class="col-md-4">
+                <input class="form-control" type="text" name="turistas" id="inputModal" placeholder="1 Adulto(s) - 0 Niño(s) - 1 Habitación(es)" data-toggle="modal" data-target="#Modal" readonly>
+            </div>
+            <div class="col-md-3">
+                <input class="btn btn-secondary btn-block boton" type="submit" value="Buscar">
+            </div>
+        </div>
+    </form>
+
+    <section>
+        <article class="row hotel">
+            <div class="col-md-4 imagen">
+                <img class="imagenHotel" src="img/hotel1.jpg" >
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="titulo">
+                            <h2><strong>Sophia House</strong></h2>
+                        </div>
+                        <div class="ubicacion">
+                            <p>Cartagena de Indias  Mostrar en el mapa  a 1,4 km del centro</p>
+                            <div>
+                                - Cerca de la playa
+                            </div>
+                        </div>
+                        <div class="descripcion">
+                            <p>Apartamento de 1 dormitorio</p>
+                        </div>
+                        <div class="detalles">
+                            <p><strong>Apartamento entero ­ •­ 1 dormitorio •­ 1 baño</strong></p>
+                        </div>
+                        <div class="especificaciones">
+                            1 litera
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="puntaje">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <p class="clasificacion text-info"><strong>Excepcional</strong></p>
+                                </div>
+                                <div class="col-md-3 califiacion">
+                                    <p>10.0</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="duracion">
+                            <p>9 noches, 1 adulto</p>
+                        </div>
+                        <div class="precio">
+                            <p class="valor">COP 400.000</p>
+                            <div class="detalle">
+                                <p>Se pueden aplicar otros cargos</p>
+                            </div>
+                        </div>
+                        <div class="botonTarjeta">
+                            <input type="button" class="btn btn-primary" value="Ver disponibilidad >">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Turistas</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                    <div class="col-md-7">
+                        <p>Adulto(s):</p>
+                    </div>
+                    <div class="col-md-1">
+                        <p><span id="adultos">1</span></p>
+                    </div>
+                  <div class="col-md-4">
+                        <input class="btn btn-secondary sumar" id="sumAd" type="submit" value="+">
+                        <input class="btn btn-secondary restar" id="resAd" type="submit" value="-">
+                  </div>
+              </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <p>Niño(s):</p>
+                    </div>
+                    <div class="col-md-1">
+                        <p><span id="ninos">0</span></p>
+                    </div>
+                    <div class="col-md-4">
+                        <input class="btn btn-secondary sumar" id="sumNn" type="submit" value="+">
+                        <input class="btn btn-secondary restar" id="resNn" type="submit" value="-">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <p>Habitación(es):</p>
+                    </div>
+                    <div class="col-md-1">
+                        <p><span id="habitaciones">1</span></p>
+                    </div>
+                    <div class="col-md-4">
+                        <input class="btn btn-secondary sumar" id="sumHb" type="submit" value="+">
+                        <input class="btn btn-secondary restar" id="resHb" type="submit" value="-">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary" id="aceptarModal">Aceptar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-4-autocomplete/dist/bootstrap-4-autocomplete.min.js" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</html>
