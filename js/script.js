@@ -5,6 +5,13 @@ let btnResNn = document.getElementById('resNn');
 let btnSumHb = document.getElementById('sumHb');
 let btnResHb = document.getElementById('resHb');
 let btnAceptar = document.getElementById('aceptarModal');
+let inputDestino = document.getElementById('destino');
+let inputCiudadDestino = document.getElementById('ciudadDestino');
+let btnBuscar = document.getElementById('btnBuscar');
+let alerta = document.getElementById('alerta');
+let equisAlerta = document.getElementById('cerrarAlerta');
+
+//window.location.href = window.location.href + '?destino=paris';
 
 let requestOptions = {
   method: 'GET',
@@ -126,6 +133,58 @@ btnAceptar.addEventListener('click', e => {
     let habitaciones = parseInt(document.getElementById('habitaciones').textContent);
 
     let turistas = document.getElementById('inputModal');
-    turistas.setAttribute('value',`${adultos} Adulto(s) - ${ninos} Niño(s) - ${habitaciones} habitación(es)`);
+    turistas.setAttribute('value',`${adultos} Adulto(s) - ${ninos} Niño(s) - ${habitaciones} Habitación(es)`);
     $('#Modal').modal('hide')
+});
+
+inputDestino.addEventListener('blur', e => {
+    if (!window.location.href.includes('?destino=')) {
+        window.location.href = window.location.href + '?destino=paris';
+    }
+});
+
+if (window.location.href.includes('destino')) {
+    inputDestino.setAttribute('value','Paris');
+    inputCiudadDestino.removeAttribute('disabled');
+}
+
+btnBuscar.addEventListener('click', e => {
+    let pais = inputDestino.value;
+    let ciudad = inputCiudadDestino.value;
+    let fechas = document.getElementById('fechas').value;
+    let turistas = document.getElementById('inputModal').value;
+
+    let txtAlerta = document.getElementById('txtAlerta');
+
+    console.log('mirame: ', turistas);
+
+    if (pais.length !== 0) {
+        if (ciudad.length !== 0) {
+           if (fechas.length !== 0) {
+                if (turistas.length !== 0) {
+
+                } else {
+                    txtAlerta.innerHTML = 'El campo de pasajeros se encuentra vacía';
+                    alerta.style.display = 'block';
+                }
+            } else {
+                txtAlerta.innerHTML = 'El campo de check-in y check-out se encuentra vacío';
+                alerta.style.display = 'block';
+            }
+        } else {
+            txtAlerta.innerHTML = 'El campo de ciudad destino se encuentra vacío';
+            alerta.style.display = 'block';
+        }
+    } else {
+        console.log('que pasa: ', !(pais.length === 0));
+        txtAlerta.innerHTML = 'El campo del pais destino se encuentra vacío';
+        alerta.style.display = 'block';
+    }
+
+    e.preventDefault;
+});
+
+
+equisAlerta.addEventListener('click', e =>{
+    alerta.style.display = 'none';
 });

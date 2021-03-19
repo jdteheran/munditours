@@ -7,25 +7,29 @@
     <title>Turismo</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jdteheran/munditours@master/css/estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <form action="" method="get" autocomplete="off">
+    <div class="alert alert-warning alert-dismissible" id="alerta">
+        <a href="#" class="close" id="cerrarAlerta">&times;</a>
+        <p><strong>Precaución!</strong> <span id="txtAlerta">Indicates a warning that might need attention.</span></p>  
+    </div>
+    <form action="" method="get" autocomplete="off"></form>
         <div class="form-row text-center formulario">
             <div class="col-md-2">
                 <input class="form-control" type="text" name="destino" id="destino" placeholder="¿A que pais vas?">
             </div>
             <div class="col-md-2">
-                <input class="form-control" type="text" name="destino" id="ciudadDestino" placeholder="¿A que ciudad vas?">
+                <input class="form-control" type="text" name="destino" id="ciudadDestino" placeholder="¿A que ciudad vas?" disabled>
             </div>
             <div class="col-md-3">
                 <input class="form-control" type="datetime" name="fechas" id="fechas" placeholder="Check in - Check out" value="">
             </div>
             <div class="col-md-3">
-                <input class="form-control" type="text" name="turistas" id="inputModal" placeholder="1 Adulto(s) - 0 Niño(s) - 1 Habitación(es)" data-toggle="modal" data-target="#Modal" readonly>
+                <input class="form-control" type="text" name="turistas" id="inputModal" value="1 Adulto(s) - 0 Niño(s) - 1 Habitación(es)" data-toggle="modal" data-target="#Modal" readonly>
             </div>
-            <div class="col-md-1">
-                <input class="btn btn-secondary btn-block boton" type="submit" value="Buscar">
+            <div class="col-md-2">
+                <input class="btn btn-secondary btn-block boton" type="submit" id="btnBuscar" value="Buscar">
             </div>
         </div>
     </form>
@@ -147,5 +151,5 @@
 <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-4-autocomplete/dist/bootstrap-4-autocomplete.min.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/gh/jdteheran/munditours@master/js/script.js"></script>
+<script src="js/script.js"></script>
 </html>

@@ -1,9 +1,9 @@
 .formulario {
-    margin: 15px 50px 15px 50px !important;
+    margin: 15px 20px 40px 20px !important;
 }
 
 .boton {
-    margin: 0px 20px 0px 20px !important;
+    margin: 0px 20px 0px 0px !important;
 }
 
 .restar, .sumar {
@@ -84,4 +84,13 @@
 
 .detalle p {
     font-size: 12px;
+}
+
+.alert p{
+    margin: 0px;
+    padding: 0px;
+}
+
+#alerta {
+    display: none;
 }
