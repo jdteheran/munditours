@@ -15,33 +15,41 @@
         <p><strong>Precaución!</strong> <span id="txtAlerta">Indicates a warning that might need attention.</span></p>  
     </div>
     <form action="" method="get" autocomplete="off"></form>
-        <div class="form-row text-center formulario">
-            <div class="col-md-2">
-                <input class="form-control" type="text" name="destino" id="destino" placeholder="¿A que pais vas?">
+        <div class="row form-row text-center formulario">
+            <div class="col-lg-7 col-md-12 grupoForm">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3">
+                        <input class="form-control" type="text" name="destino" id="destino" placeholder="¿A que pais vas?">
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <input class="form-control" type="text" name="destino" id="ciudadDestino" placeholder="¿A que ciudad vas?" disabled>
+                    </div>
+                    <div class="col-lg-5 col-md-5">
+                        <input class="form-control" type="datetime" name="fechas" id="fechas" placeholder="Check in - Check out" value="">
+                    </div>
+                </div>
             </div>
-            <div class="col-md-2">
-                <input class="form-control" type="text" name="destino" id="ciudadDestino" placeholder="¿A que ciudad vas?" disabled>
-            </div>
-            <div class="col-md-3">
-                <input class="form-control" type="datetime" name="fechas" id="fechas" placeholder="Check in - Check out" value="">
-            </div>
-            <div class="col-md-3">
-                <input class="form-control" type="text" name="turistas" id="inputModal" value="1 Adulto(s) - 0 Niño(s) - 1 Habitación(es)" data-toggle="modal" data-target="#Modal" readonly>
-            </div>
-            <div class="col-md-2">
-                <input class="btn btn-secondary btn-block boton" type="submit" id="btnBuscar" value="Buscar">
+            <div class="col-lg-5 col-md-12 grupoForm">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8">
+                        <input class="form-control" type="text" name="turistas" id="inputModal" value="1 Adulto(s) - 0 Niño(s) - 1 Habitación(es)" data-toggle="modal" data-target="#Modal" readonly>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <input class="btn btn-secondary btn-block boton" type="submit" id="btnBuscar" value="Buscar">
+                    </div>
+                </div>
             </div>
         </div>
     </form>
 
     <section>
         <article class="row hotel">
-            <div class="col-md-4 imagen">
+            <div class="col-lg-4 imagen">
                 <img class="imagenHotel" src="http://munditursas.com/wp-content/uploads/2021/03/hotel1.jpg" >
             </div>
-            <div class="col-md-8">
+            <div class="col-lg-8">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-lg-7 col-md-7 col-sm-12">
                         <div class="titulo">
                             <h2><strong>Sophia House</strong></h2>
                         </div>
@@ -61,14 +69,16 @@
                             1 litera
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-5 col-md-5 col-sm-12 izq">
                         <div class="puntaje">
                             <div class="row">
-                                <div class="col-md-7">
-                                    <p class="clasificacion text-info"><strong>Excepcional</strong></p>
-                                </div>
-                                <div class="col-md-3 califiacion">
-                                    <p>10.0</p>
+                                <div class="col clearfix">
+                                    <div class="float-left derxs">
+                                        <p class="clasificacion text-info"><strong>Excepcional</strong></p>
+                                    </div>
+                                    <div class="float-right califiacion derxs">
+                                        <p>10.0</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +92,7 @@
                             </div>
                         </div>
                         <div class="botonTarjeta">
-                            <input type="button" class="btn btn-primary" value="Ver disponibilidad >">
+                            <input type="button" class="btn btn-primary btn-disp" value="Ver disponibilidad">
                         </div>
                     </div>
                 </div>
@@ -101,37 +111,37 @@
             </div>
             <div class="modal-body">
               <div class="row">
-                    <div class="col-md-7">
+                    <div class="col-lg-7">
                         <p>Adulto(s):</p>
                     </div>
-                    <div class="col-md-1">
+                    <div class="col-lg-1">
                         <p><span id="adultos">1</span></p>
                     </div>
-                  <div class="col-md-4">
+                  <div class="col-lg-4">
                         <input class="btn btn-secondary sumar" id="sumAd" type="submit" value="+">
                         <input class="btn btn-secondary restar" id="resAd" type="submit" value="-">
                   </div>
               </div>
                 <div class="row">
-                    <div class="col-md-7">
+                    <div class="col-lg-7">
                         <p>Niño(s):</p>
                     </div>
-                    <div class="col-md-1">
+                    <div class="col-lg-1">
                         <p><span id="ninos">0</span></p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-4">
                         <input class="btn btn-secondary sumar" id="sumNn" type="submit" value="+">
                         <input class="btn btn-secondary restar" id="resNn" type="submit" value="-">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-7">
+                    <div class="col-lg-7">
                         <p>Habitación(es):</p>
                     </div>
-                    <div class="col-md-1">
+                    <div class="col-lg-1">
                         <p><span id="habitaciones">1</span></p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-4">
                         <input class="btn btn-secondary sumar" id="sumHb" type="submit" value="+">
                         <input class="btn btn-secondary restar" id="resHb" type="submit" value="-">
                     </div>

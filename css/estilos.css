@@ -2,8 +2,14 @@
     margin: 15px 20px 40px 20px !important;
 }
 
+
 .boton {
     margin: 0px 20px 0px 0px !important;
+}
+
+.botonTarjeta {
+    float: right;
+    margin-right: 20px;
 }
 
 .restar, .sumar {
@@ -14,7 +20,7 @@
 .hotel {
     border: solid 1px #4e4e50;
     padding: 30px 0px 30px 0px;
-    margin: 10px 200px 10px 200px;
+    margin: 10px 100px 10px 100px;
     border-radius: 12px 12px 12px 0px;
     -webkit-box-shadow: -4px 4px 2px 0px rgba(74,62,74,0.4);
     -moz-box-shadow: -4px 4px 2px 0px rgba(74,62,74,0.4);
@@ -26,8 +32,8 @@
 }
 
 .imagenHotel {
-    height: 230px;
-    width: 230px;
+    height: 200px;
+    width: 300px;
     border-radius: 12px;
 }
 
@@ -55,12 +61,18 @@
 
 .clasificacion {
     margin-top: 5px;
+    margin-left: 100px;
     padding-bottom: 45px;
+}
+
+.califiacion {
+    margin-left: 10px;
 }
 
 .califiacion p {
     background: #007bff;
-    padding: 5px 38px 5px 5px;
+    padding: 5px 7px 5px 5px;
+    margin-right: 15px;
     border-radius: 7px;
     color: white;
     font-weight: bold;
@@ -93,4 +105,135 @@
 
 #alerta {
     display: none;
+}
+
+@media (max-width: 1270px) {
+    .clasificacion {
+        margin-left: 80px;
+    }
+}
+
+@media (max-width: 1220px) {
+    .formulario {
+        display: block;
+    }
+
+    .grupoForm {
+        padding-bottom: 10px;
+        max-width: 100%;
+    }
+
+    .clasificacion {
+        margin-left: 70px;
+    }
+}
+
+@media (max-width: 1162px) {
+    .imagenHotel {
+        height: 200px;
+        width: 250px;
+    }
+
+    .clasificacion {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 1092px) {
+    .clasificacion {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 1030px) {
+    .clasificacion {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 991px) {
+    .imagen {
+        padding-bottom: 20px;
+    }
+
+    .imagenHotel {
+        width: 80%;
+    }
+
+    .clasificacion {
+        margin-left: 130%;
+    }
+}
+
+@media (max-width: 965px) {
+    .clasificacion {
+        margin-left: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .clasificacion {
+        margin-left: 80%;
+    }
+}
+
+@media (max-width: 850px) {
+    .clasificacion {
+        margin-left: 60%;
+    }
+}
+
+@media (max-width: 800px) {
+    .clasificacion {
+        margin-left: 40%;
+    }
+}
+
+@media (max-width: 767px) {
+    .grupoForm {
+        padding-bottom: 0px;
+    }
+
+    .puntaje {
+        display: none;
+    }
+
+    .izq {
+        padding-top: 15px;
+    }
+
+    .derxs {
+        float: left !important;
+    }
+
+    .califiacion {
+        margin-left: 50px;
+    }
+
+    .precio, .duracion {
+        text-align: left;
+    }
+
+    .ubicacion div, .detalles p {
+        padding-bottom: 5px;
+    }
+
+    .descripcion p{
+        font-size: 14px;
+    }
+
+    .especificaciones {
+        font-size: 14px;
+    }
+
+    .hotel {
+        margin: 10px 50px 10px 50px;
+    }
+}
+
+@media (max-width: 570px) {
+    .botonTarjeta, .btn-disp {
+        width: 100%;
+        margin-left: 20px;
+    }
 }
