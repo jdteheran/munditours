@@ -14,7 +14,7 @@
         <a href="#" class="close" id="cerrarAlerta">&times;</a>
         <p><strong>Precaución!</strong> <span id="txtAlerta">Indicates a warning that might need attention.</span></p>  
     </div>
-    <form action="" method="get" autocomplete="off"></form>
+    <form action="" method="get" autocomplete="off">
         <div class="row form-row text-center formulario">
             <div class="col-lg-7 col-md-12 grupoForm">
                 <div class="row">
@@ -183,27 +183,6 @@
     redirect: 'follow'
     };
 
-    fetch("https://restcountries.eu/rest/v2/all", requestOptions)
-    .then(response => response.json())
-    .then(result => paises(result))
-    .catch(error => console.log('error', error));
-
-    let paises = result => {
-        let id = 1;
-        let paises = new Map();
-
-        result.forEach(element => {
-            paises.set(element.name, id);
-            id++;
-        });
-        
-        $('#destino').autocomplete({
-            source: Object.fromEntries(paises),
-            highlightClass: 'text-danger',
-            treshold: 2,
-        });
-    }
-
     $('#fechas').daterangepicker({
         autoUpdateInput: false,
         locale: {
@@ -355,8 +334,39 @@
     });
 
     function test_function(){
-
         return "QWERQWERQWERQWERQWERQWER";
     }
+
+
+    // fetch("https://restcountries.eu/rest/v2/all", requestOptions)
+    // .then(response => response.json())
+    // .then(result => paises(result))
+    // .catch(error => console.log('error', error));
+
+    // let paises = result => {
+    //     let id = 1;
+    //     let paises = new Map();
+
+    //     result.forEach(element => {
+    //         paises.set(element.name, id);
+    //         id++;
+    //     });
+        
+    //     $('#destino').autocomplete({
+    //         source: Object.fromEntries(paises),
+    //         highlightClass: 'text-danger',
+    //         treshold: 2,
+    //     });
+    // }
+
+    function fill_countrylist(contry_map) {
+        $('#destino').autocomplete({
+            source: Object.fromEntries(contry_map),
+            highlightClass: 'text-danger',
+            treshold: 2,
+        });
+    }
+
+    
 </script>
 </html>
